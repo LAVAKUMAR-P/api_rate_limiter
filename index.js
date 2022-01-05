@@ -1,5 +1,5 @@
 var http = require("http");
-
+const PORT=process.env.PORT || 3001;
 let Requests = 5;
 let time = 60000;
 
@@ -91,6 +91,6 @@ http.createServer(function (req, res) {
         }
       });
   })
-  .listen(3005, function () {
-    console.log("server start at port 3005"); //the server object listens on port 3000
+  .listen(PORT, function () {
+    console.log(`server start at port ${PORT}`); //the server object listens on port 3000
   });
